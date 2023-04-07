@@ -1,0 +1,30 @@
+vector<vector<string>> groupAnagrams(vector<string>& str) {
+        
+        
+            vector<vector<string>> myans;
+
+           unordered_map<string, vector<string>>m;
+
+        
+        
+        
+        for(int i = 0 ; i < str.size() ; i++)
+        {
+            string st = str[i];
+            
+            sort(str[i].begin(),str[i].end());
+            
+            m[str[i]].push_back(st);
+        }
+        
+        
+       
+        for(auto i : m)
+        {
+            myans.push_back(i.second);
+        }
+
+        return myans;
+        
+        
+    }
