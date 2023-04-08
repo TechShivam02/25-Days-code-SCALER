@@ -1,0 +1,13 @@
+string ans = str.substr(0,m);
+        
+        if(ans == obj){
+            return 0;
+        }
+        
+        
+        int pos = str.find(obj);
+        
+        if(pos !=0){
+            return pos;
+        }
+        return -1;
